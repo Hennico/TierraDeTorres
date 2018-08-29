@@ -1,0 +1,29 @@
+/// cargar_configuracion()
+
+var savemap = ds_map_secure_load("game.config");
+if (ds_exists(savemap, ds_type_map)) {
+    if (savemap[? "version"] != SAVE_VERTION || !savemap[? "partida iniciada"])
+        ds_map_destroy(savemap);
+}
+
+if (!ds_exists(savemap, ds_type_map)) {
+    savemap = ds_map_create();
+    savemap[? "version"] = SAVE_VERTION;
+    savemap[? "mano diestra"] = OrientacionPad.diestro;
+    savemap[? "partida iniciada"] = false;
+    savemap[? "scrolls imagenes"] = "";
+    savemap[? "formas hechizos"] = "";
+    savemap[? "libro hechizos"] = "";
+    ds_map_secure_save(savemap, "game.config");
+}
+
+// out game
+global.manoDiestra = savemap[? "mano diestra"];
+global.partidaIniciada = savemap[? "partida iniciada"];
+
+// in game
+global.scrollsImagenes = savemap[? "scrolls imagenes"];
+global.formasHechizos = savemap[? "formas hechizos"];
+global.libroHechizos = savemap[? "libro hechizos"];
+
+ds_map_destroy(savemap);
