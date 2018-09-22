@@ -14,6 +14,7 @@ if (!ds_exists(savemap, ds_type_map)) {
     savemap[? "scrolls imagenes"] = "";
     savemap[? "formas hechizos"] = "";
     savemap[? "libro hechizos"] = "";
+    savemap[? "idioma"] = "esp";
     ds_map_secure_save(savemap, "game.config");
 }
 
@@ -25,5 +26,7 @@ global.partidaIniciada = savemap[? "partida iniciada"];
 global.scrollsImagenes = savemap[? "scrolls imagenes"];
 global.formasHechizos = savemap[? "formas hechizos"];
 global.libroHechizos = savemap[? "libro hechizos"];
+global.idioma_nombre = savemap[? "idioma"];
+cargar_idioma(global.idioma_nombre);
 
 ds_map_destroy(savemap);

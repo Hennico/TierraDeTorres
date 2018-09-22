@@ -10,6 +10,7 @@ savemap[? "partida iniciada"] = global.partidaIniciada;
 savemap[? "libro hechizos"] = global.libroHechizos;
 savemap[? "formas hechizos"] = global.formasHechizos;
 savemap[? "scrolls imagenes"] = global.scrollsImagenes;
+savemap[? "idioma"] = global.idioma_nombre;
 
 ds_map_secure_save(savemap, "game.config");
 ds_map_destroy(savemap);
