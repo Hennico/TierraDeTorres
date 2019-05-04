@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>/// Iniciar juego nuevo
 limpiar_saves();
-room_goto(rm_ciudad);
+scr_inicializarJuego();
+room_goto(rm_laberintoEterno);
 </string>
           </argument>
         </arguments>

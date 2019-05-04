@@ -181,7 +181,7 @@
       <script>scripts\inic_idioma_eng.gml</script>
       <script>scripts\scr_generar_idiomas.gml</script>
     </scripts>
-    <script>scripts\script64.gml</script>
+    <script>scripts\scr_inicializarJuego.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fn_default</font>

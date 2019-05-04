@@ -10,41 +10,7 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>global.salidaX = 1;
-global.salidaY = 1;
-global.entradaX = 1+irandom(5)*2;
-global.entradaY = 1+irandom(5)*2;
-global.sigTurno = false;
-global.surfaceSombra = noone;
-
-if(!instance_exists(obj_menu)) {
-    instance_create(0,0,obj_menu);
-    instance_create(0,0,obj_accionActiva);
-}
-with(obj_menu) event_user(0);
-
-randomize();
-if (global.partidaIniciada) {
-    cargar_configuracion();
-    cargar_progreso();
-    cargar_inventario();
-} else {
-    global.pisoMaximo = 3;
-    scr_generarImagenesPergaminos();
-    scr_generarConjuracionesParaHechizos();
-}
-limpiar_saves();
-if (!global.estaEnCiudad)
-    global.pisoMaximo++;
-global.estaEnCiudad = true;
-global.partidaIniciada = true;
-
-grabar_configuracion();
-grabar_progreso();
-grabar_inventario();
-with(obj_menu) event_user(0);
-obj_personaje.x = obj_personaje.xstart;
-obj_personaje.y = obj_personaje.ystart;</code>
+  <code></code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
